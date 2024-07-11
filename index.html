@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="CodeZTE-Fundo-Branco.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+    <title>Code ZTE | Início</title>
+</head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZ0853G8N6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LZ0853G8N6');
+    </script>
+<body>
+    <header>
+        <a href="sobre.html">Sobre</a>
+    </header>
+    <div class="container">
+        <div id="formulario">
+            <fieldset id="interface-olt">
+                <legend>Selecione a interface da OLT ZTE</legend>
+                <label for="frame">Frame da OLT</label>
+                <select name="" id="frame" required>
+                    <option value="1">1</option>
+                </select>
+                <label for="slot">Slot da OLT</label>
+                <select name="" id="slot" required>
+                        <option value="--">--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                </select>
+                <label for="porta">Porta da OLT</label>
+                <select name="" id="porta" required>
+                        <option value="--">--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                </select>
+            </fieldset>
+            <fieldset id="info-ont">
+                <div>
+                    <input type="checkbox" name="modo-bridge" id="modo-bridge">
+                    <label for="wifi-desabilitado">Modo Bridge</label>
+                </div>
+                <legend>Complete com as informações da ONT</legend>
+                <label for="id-onu">Id da ONU</label>
+                <input type="number" name="idOnu" id="id-onu" placeholder="1-128">
+                <label for="type-ont">Selecione o type da ONT</label>
+                <select name="typeOnt" id="type-ont">
+                    <option value="Selecione o modelo">Selecione o modelo</option>
+                    <option value="i6-ZTE-F670L">i6-ZTE-F670L</option>
+                    <option value="i6-ZTE-F6600">i6-ZTE-F6600</option>
+                </select>
+                <label for="sn-ont">Digite o SN da ONT</label>
+                <input type="text" name="snOnt" id="sn-ont" placeholder="Serial Number" oninput="removeSpacesRealTime(event)">
+            </fieldset>
+            <fieldset>             
+                <legend>Complete com as informações do cliente</legend>
+                <label for="nameOnt">Digite o name da ONT</label>
+                <input type="text" name="nameOnt" id="name-ont" placeholder="CódConexão-NOME.SOBRENOME" oninput="removeSpacesRealTime(event)">
+                <label for="description-ont">Digite o description da ONT</label>
+                <input type="text" name="description-ont" id="description-ont" placeholder="Endereço completo">
+                <div id="box-pppoe">
+                    <label for="usuario-pppoe">Usuário PPPoE</label>
+                    <input type="text" name="usuarioPppoe" id="usuario-pppoe" placeholder="nome.sobrenome" oninput="removeSpacesRealTime(event)">
+                    <label for="senha-pppoe">Senha PPPoE</label>
+                    <input type="text" name="usuarioPppoe" id="senha-pppoe" placeholder="**********" oninput="removeSpacesRealTime(event)">
+                </div>
+                <div id="box-check-wifi">
+                    <input type="checkbox" name="wifiDesabilitado" id="wifiDesabilitado">
+                    <label for="wifi-desabilitado">Wi-Fi desabilitado</label>
+                </div>
+                <div id="campo-wifi">
+                    <label for="rede-wifi">Digite o nome da rede Wi-Fi</label>
+                    <input type="text" name="redeWifi" id="rede-wifi" placeholder=" Sem Espaços" oninput="removeSpacesRealTime(event)">
+                    <label for="senha-wifi">Digite a senha da rede Wi-Fi</label>
+                    <input type="text" name="senhaWifi" id="senha-wifi" placeholder="min 8 caractéres">
+                    <div class="box-p-erro" id="p-dados-wifi">
+                        <img src="icones/erro.png" alt="" class="icone">
+                        <p>Preencha os dados do Wi-Fi</p>
+                    </div>
+                    <div class="box-p-erro" id="p-senha-wifi">
+                        <img src="icones/erro.png" alt="" class="icone">
+                        <p>A senha precisa ter mínimo 8 caracteres</p>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" name="Telefonia" id="habilitarTelefonia">
+                    <label for="habilitarTelefonia">Telefonia</label>
+                </div>
+                <div id="campo-telefonia">
+                    <label for="numero-sip">Digite o número SIP</label>
+                    <input type="number" name="numeroSip" id="numero-sip" placeholder="Usuário SIP">
+                    <label for="senha-sip">Digite a senha SIP</label>
+                    <input type="text" name="senha-sip" id="senha-sip" placeholder="Senha SIP">
+                    <div class="box-p-erro" id="p-dados-telefonia">
+                        <img src="icones/erro.png" alt="" class="icone">
+                        <p>Preencha os dados da telefonia</p>
+                    </div>    
+                </div>
+            </fieldset>
+            <div id="boxBtnCodigo">
+                <div id="box-codigo-gerado">
+                    <button id="gerar-codigo" class="btn-gerar-codigo">Gerar Código</button>
+                    <div id="box-p-codigo-gerado" id="p-codigo-gerado">
+                        <p id="p-codigo-gerado">Código Gerado!</p>
+                        <img src="icones/ok.png" alt="" class="icone">
+                    </div>
+                    <div id="p-todos-dados">
+                        <img src="icones/erro.png" alt="" class="icone">
+                        <p>Verifique os dados</p>
+                    </div>
+                </div>
+                <p id="p-reset">restaurar</p>
+            </div>
+        </div>
+        <div>
+            <div id="codigo-gerado" class="codigo-gerado">
+                <div id="codigo">
+                    <!-- <p>
+                        interface gpon_onu-1/X/X:X<br>
+                        name <br>
+                        description <br>
+                        vport-mode manual<br>
+                        tcont 1 name Internet profile 1GB<br>
+                        vport 1 name Internet map-type vlan<br>
+                        gemport 1 name Internet tcont 1<br>
+                        vport-map 1 1 vlan 100<br>
+                        tcont 2 name Voip profile VOIP<br>
+                        gemport 2 name Voip tcont 2<br>
+                        vport 2 name Voip map-type vlan<br>
+                        vport-map 2 2 vlan 200<br>
+                        $<br>
+    
+                        pon-onu-mng gpon_onu-1/X/X:X<br>
+                        dhcp-ip ethuni eth_0/1 from-onu<br>
+                        dhcp-ip ethuni eth_0/2 from-onu<br>
+                        dhcp-ip ethuni eth_0/3 from-onu<br>
+                        dhcp-ip ethuni eth_0/4 from-onu<br>
+                        security-mgmt 1 state enable mode forward protocol web https <br>
+                        security-mgmt 1 start-src-ip 45.231.140.0 end-src-ip 45.231.140.255 <br>
+                        security-mgmt 198 state enable mode forward ingress-type lan protocol web https <br>
+                        security-mgmt 199 state enable ingress-type lan protocol ftp telnet ssh snmp tr069 <br>
+                        tr069-mgmt 1 state unlock acs https://acs.rs.sim.digital:7547 <br>
+                        service 1 gemport 1 vlan 100<br>
+    
+                        wan-ip ipv4 mode pppoe username jelmir.borges password fff341 vlan-profile INTERNET host 1<br>
+                        ssid auth wpa wifi_0/1 auth-algrithm wpa2-psk encrypt aes key <br>
+                        ssid auth wpa wifi_0/5 auth-algrithm wpa2-psk encrypt aes key <br>
+                        ssid ctrl wifi_0/1 name  user-isolation disable<br>
+                        ssid ctrl wifi_0/5 name -5G user-isolation disable<br>
+                        service Voip gemport 2 vlan 200<br>
+                        voip protocol sip<br>
+                        voip-ip ipv4 mode dhcp vlan-profile VOIP host 2<br>
+                        voip-ip ipv4 ping-response enable traceroute-response enable<br>
+                        sip-service pots_0/1 profile SIP-Telefonia-POA07 userid NUMERO_TELEFONE username NUMERO_TELEFONE password SENHA_SIP display-name NUMERO_TELEFONE<br>
+                        $ <br>
+                        interface vport-1/X/X.X:X<br>
+                        service-port 1 user-vlan 100 vlan 2300<br>
+                        service-port 1 description Internet<br>
+                        $ <br>
+                        interface vport-1/X/X.X:X<br>
+                        service-port 2 user-vlan 200 vlan 4063<br>
+                        service-port 2 description Voip<br>
+                        $ <br>
+                        /* configuração adicional para extender vlan para telefonia */<br>
+                        no dhcp-ip ethuni eth_0/4 from-onu<br>
+                        vlan port eth_0/4 mode tag vlan 200<br>
+                    </p> -->
+                </div>
+                <div id="funcoes-copiar">
+                    <button id="btn-copiar-codigo" class="btn-copiar-codigo">Copiar Código</button>
+                    <div id="box-p-codigo-copiado">
+                        <p id="p-codigo-gerado">Código Copiado!</p>
+                        <img src="icones/ok.png" alt="" class="icone">
+                    </div>
+                </div>
+            </div>
+            <div id="orientacoes" class="orientacoes">
+                <h2>Orientações</h2>
+                <p>Para descobrir ONUs a serem provisionadas de o comando: <b>show pon onu uncfg</b>.</p>
+                <p>Após descobrir, acesse o modo de configuração com o comando: <b>configure terminal</b>.</p>
+                <p>Acesse interface GPON e veja qual o próximo ID disponível para a ONU, dentro da interface de o comando: <b>show this</b>.</p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

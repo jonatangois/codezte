@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="CodeZTE-Fundo-Branco.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+    <title>Code ZTE | Sobre</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">Início</a>
+    </header>
+    <div class="sobre">
+        <div id="box-sobre">
+            <div id="box-texto-sobre">
+                <p>Página Web desenvolida para ser um gerador de código para ONT (Terminal de Rede Óptica) dos modelos i6-ZTE-F670L e i6-ZTE-F6600 no modo router.</p>
+                <p>Projeto desenvolvido com HTML5, CSS3 e Javascript, apenas para uso pessoal e treinamento de linguagens.</p>
+                
+            </div>      
+            <div id="box-formulario-email">
+                <p id="texto-mensagem">Reporte um erro, deixe uma sugestão ou apenas envie sua mensagem...</p>
+                <div id="box-email">
+                    <form action="https://formsubmit.co/jonatangois1@gmail.com" method="POST">
+                        <div class="box-label">
+                            <input type="text" name="name" id="nome-input" placeholder="Digite seu nome" required>
+                        </div>
+                            <div class="box-label">
+                                <input type="email" name="email" id="" placeholder="Digite seu email" required>
+                            </div>
+                            <div class="">
+                                <textarea name="corpo" id="corpo" required></textarea>
+                                <button type="submit" id="btn-enviar-msg">Enviar</button>    
+                            </div>
+                        </div>
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/agradecimento.html">
+                    </form>
+                </div>
+            </div>
+            <div id="box-logo-sobre">
+                <img src="CodeZTE-Fundo-Azul.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="main-sobre.js"></script>
+</body>
+</html>

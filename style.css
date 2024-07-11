@@ -1,0 +1,369 @@
+:root{
+    --branco: #fff;
+    --fundo-focus: #e3e4ef36;
+    --azul: #121695;
+    --verde: #4eed31;
+    --vermelho: #f44437;
+    --cinza: #a1a1a1;
+    --preto: #000;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+}
+
+header{
+    text-align: end;
+    padding-right: 65px;
+}
+
+header a{
+    color: var(--preto);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--azul);
+}
+
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    background-image: url(CodeZTE-Transparente-Branco.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 5px;
+}
+
+.icone{
+    width: 13px;
+}
+
+#formulario{
+    margin: 5px 40px 0 30px;
+    z-index: 100;
+    background-color: var(--branco);
+}
+
+fieldset {
+    border: solid 2px var(--azul);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    font-size: 18px;
+    z-index: 100;
+}
+
+fieldset legend{
+    font-weight: 700;
+}
+
+fieldset label{
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+input[type="checkbox"]{
+    width: 15px;
+}
+
+fieldset input{
+    width: 62%;
+    margin-top: 3px;
+}
+
+fieldset select{
+    width: 64.5%;
+    border: solid 2px #000;
+}
+
+select#frame, select#slot, select#porta{
+    width: 10%;
+}
+
+fieldset input, fieldset select{
+    padding: 3px 3px 3px 5px;
+    border-radius: 5px;
+}
+
+fieldset input:focus, fieldset select:focus{
+    border: solid 2px var(--azul);
+    outline: none;
+}
+
+fieldset#interface-olt{
+    flex-direction: row;
+}
+fieldset#interface-olt label{
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+#campo-wifi, #campo-telefonia, #box-pppoe{
+    display: flex;
+    flex-direction: column;
+}
+
+#senha-wifi, #senha-sip{
+    margin-bottom: 5px;
+}
+#name-ont{
+    text-transform: uppercase;
+}
+
+/************************************/
+
+.codigo-gerado{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 30px;
+    transition: 0.7s;
+}
+
+.codigo-gerado-after{
+    left: 580px;
+}
+
+#codigo{    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: var(--branco);
+    margin-top: 10px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+#codigo p{
+    margin: 0;
+}
+.btn-gerar-codigo, #btn-copiar-codigo, #btn-enviar-msg{
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    width:105px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+.btn-gerar-codigo:hover, #btn-copiar-codigo:hover, #btn-enviar-msg:hover{
+    background-color: #5555ff;
+    transition: 0.3s;
+}
+#boxBtnCodigo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+#box-codigo-gerado{
+    display: flex;
+    align-items: center;
+}
+
+#box-p-codigo-gerado, #box-p-codigo-copiado{
+    display: none;
+    align-items: center;
+    background-color: #4ded314f;
+    padding: 2px 5px;
+    border: solid 1.5px var(--verde);
+}
+#p-codigo-gerado, #p-codigo-copiado{
+    margin: 0;
+    color: #01ab09;
+    font-weight: 600;
+    font-size: 13px;
+    margin-right: 3px;
+}
+#p-reset{
+    margin: 0;
+    cursor: pointer;
+}
+#p-reset:hover{
+    color: var(--azul);
+}
+#p-reset:active{
+    color: var(--verde);
+}
+
+.box-p-erro{
+    display: flex;
+    align-items: center;
+    background-color: #f444372d;
+    padding: 2px 5px;
+    border: solid 1.5px var(--vermelho);
+    margin-left: 0px;
+    width: 62%;
+}    
+
+#p-todos-dados, #p-dados-telefonia, #p-senha-wifi, #p-dados-wifi{
+    display: none;
+}
+
+#p-dados-wifi p, #p-senha-wifi p, #p-dados-telefonia p, #p-todos-dados p{
+    color: var(--vermelho);
+    font-weight: 600;
+    font-size: 13px;
+    margin-right: 3px;
+    margin: 0;
+    margin-left: 3px;
+}
+
+#p-todos-dados{
+    display: none;
+    align-items: center;
+    background-color: #f444372d;
+    padding: 2px 5px;
+    border: solid 1.5px var(--vermelho);
+}
+
+.orientacoes{
+    height: 90vh;
+    width: 100%;
+    display: block;
+    transition: 1s;
+}
+
+#funcoes-copiar{
+    display: flex;
+    align-items: center;
+}
+
+.sobre{
+    display: flex;
+    justify-content: center;
+    padding: 50px 100px;
+    height: 80vh;
+}
+
+form{
+    width: 100%;
+}
+
+#box-sobre{
+    width: 100%;
+}
+#box-texto-sobre{
+    padding: 30px 0;
+}
+#box-logo-sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#box-logo-sobre img{
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+}
+#box-formulario-email{
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px #7f7f7f56;
+    height: 50vh;
+}
+#box-formulario-email p{
+    margin: 0;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 13px;
+}
+#box-email{
+    display: flex;
+    align-items: center;
+}
+
+#box-email input{
+    margin-bottom: 15px;
+}
+
+#box-email textarea{
+    width: 96%;
+    height: 180px;
+    border: 1px solid var(--preto);
+    border-radius: 5px 10px 5px 5px;
+    padding: 10px;
+    font-family: Inter;
+}
+#box-email input:focus{
+    border-bottom: 1px solid var(--azul);
+    outline: none;
+}
+#box-email textarea:focus{
+    border: 1px solid var(--azul);
+    outline: none;
+}
+.box-label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.box-label label{
+    font-size: 15px;
+    color: var(--cinza);
+    transition: 1s;
+}
+.box-label input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--preto);
+    width: 40%;
+    height: 25px;
+    font-family: Inter;
+    font-size:13px;
+    transition: 1s;
+}
+.box-label input:focus{
+    font-size: 15px;
+    text-align: start;
+}
+.box-agradecimento{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.box-agradecimento img{
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+}
+
+#link-inicio{
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--azul);
+    padding: 5px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+#link-inicio:visited{
+    color: var(--azul);
+}
+
+#link-inicio:hover{
+    color: var(--preto);
+    background-color: var(--cinza);
+    padding: 5px;
+    border-radius: 8px;
+}
